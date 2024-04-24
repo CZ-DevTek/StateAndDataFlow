@@ -58,7 +58,6 @@
 		A85A88702BD69FB7000D0EC5 = {
 			isa = PBXGroup;
 			children = (
-				4FF523242BD9B30000B3884D /* Data */,
 				A85A887B2BD69FB7000D0EC5 /* StateAndDataFlow */,
 				A85A887A2BD69FB7000D0EC5 /* Products */,
 			);
@@ -79,6 +78,7 @@
 				A8D9E3E72BD6EA91005BA7D9 /* RootView.swift */,
 				A8D9E3E22BD6E6FC005BA7D9 /* LoginView */,
 				A85A888A2BD6DC8C000D0EC5 /* ContentView */,
+				4FF523242BD9B30000B3884D /* Data */,
 				A85A88802BD69FB9000D0EC5 /* Assets.xcassets */,
 				A85A88822BD69FB9000D0EC5 /* Preview Content */,
 			);
