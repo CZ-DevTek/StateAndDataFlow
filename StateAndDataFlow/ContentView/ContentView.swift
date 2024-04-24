@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var contentViewVM: ContentViewViewModel
+    @EnvironmentObject private var contentViewVM: ContentViewViewModel
     @EnvironmentObject private var loginViewVM: LoginViewViewModel
     @State private var navigateToLogin = false
     
@@ -59,10 +59,11 @@ struct ButtonView: View {
 
 struct ButtonLogout: View {
     @Bindable var contentViewVM: ContentViewViewModel
-    
+    @EnvironmentObject var loginViewVM: LoginViewViewModel
     var body: some View {
         Button(action: contentViewVM.buttonDidPressed) {
             Text(contentViewVM.buttonName)
+            loginViewVM.resetName()
         }
         .modifier(ButtonViewModifier(viewModel: contentViewVM, background: .blue))
     }

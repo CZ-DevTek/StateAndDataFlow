@@ -10,7 +10,7 @@ import Observation
 
 @Observable
 final class ContentViewViewModel: ObservableObject {
-    
+
     
     var counter = 3
     var buttonTitle = "Start"
@@ -23,6 +23,7 @@ final class ContentViewViewModel: ObservableObject {
     func buttonDidPressed() {
         buttonName = "LogOut"
         navigateToLogin = true
+        
     }
     
     func startTimer() {
