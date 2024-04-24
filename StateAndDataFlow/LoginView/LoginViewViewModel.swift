@@ -20,7 +20,6 @@ final class LoginViewViewModel: ObservableObject {
             isLoggedIn.toggle()
         }
     }
-    
     func resetName() {
         name = ""
     }

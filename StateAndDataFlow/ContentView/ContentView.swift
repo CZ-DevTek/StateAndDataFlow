@@ -41,7 +41,7 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environment(ContentViewViewModel())
+        .environmentObject(ContentViewViewModel())
         .environmentObject(LoginViewViewModel())
 }
 
@@ -60,6 +60,7 @@ struct ButtonView: View {
 struct ButtonLogout: View {
     @Bindable var contentViewVM: ContentViewViewModel
     @EnvironmentObject var loginViewVM: LoginViewViewModel
+    
     var body: some View {
         Button(action:{
             contentViewVM.buttonDidPressed()
