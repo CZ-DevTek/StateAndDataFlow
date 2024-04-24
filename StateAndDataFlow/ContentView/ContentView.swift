@@ -21,7 +21,7 @@ struct ContentView: View {
             Text(contentViewVM.counter.formatted())
                 .font(.largeTitle)
                 .padding(.top, 100)
-                
+            
             Spacer()
             
             ButtonView(contentViewVM: contentViewVM)
@@ -53,7 +53,7 @@ struct ButtonView: View {
             Text(contentViewVM.buttonTitle)
         }
         .modifier(ButtonViewModifier(viewModel: contentViewVM, background: .red))
-       
+        
     }
 }
 

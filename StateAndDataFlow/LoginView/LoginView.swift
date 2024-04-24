@@ -12,8 +12,8 @@ struct LoginView: View {
     @State private var characterCount = 0
     
     private var isNameValid: Bool {
-            characterCount >= 3
-        }
+        characterCount >= 3
+    }
     
     var body: some View {
         VStack {
@@ -21,8 +21,8 @@ struct LoginView: View {
                 TextField("Enter your name", text: $loginViewVM.name)
                     .multilineTextAlignment(.center)
                     .onChange(of: loginViewVM.name) {_, newValue in
-                                    characterCount = newValue.count
-                                }
+                        characterCount = newValue.count
+                    }
                 Text("\(characterCount)")
                     .foregroundColor(characterCount >= 3 ? .green : .red)
             }
@@ -34,8 +34,7 @@ struct LoginView: View {
         }
         .padding()
     }
-
-    }
+}
 
 #Preview {
     LoginView()

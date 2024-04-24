@@ -11,7 +11,6 @@ import Observation
 @Observable
 final class ContentViewViewModel: ObservableObject {
 
-    
     var counter = 3
     var buttonTitle = "Start"
     var buttonName = "LogOut"

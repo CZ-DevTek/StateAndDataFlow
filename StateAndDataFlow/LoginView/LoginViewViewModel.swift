@@ -11,7 +11,7 @@ final class LoginViewViewModel: ObservableObject {
     @Published var name = ""
     @Published var isLoggedIn = false
     
-    var isNameValid: Bool {
+    private var isNameValid: Bool {
         return name.count >= 3
     }
     
@@ -20,6 +20,7 @@ final class LoginViewViewModel: ObservableObject {
             isLoggedIn.toggle()
         }
     }
+    
     func resetName() {
         name = ""
     }
