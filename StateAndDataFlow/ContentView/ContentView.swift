@@ -61,9 +61,11 @@ struct ButtonLogout: View {
     @Bindable var contentViewVM: ContentViewViewModel
     @EnvironmentObject var loginViewVM: LoginViewViewModel
     var body: some View {
-        Button(action: contentViewVM.buttonDidPressed) {
-            Text(contentViewVM.buttonName)
+        Button(action:{
+            contentViewVM.buttonDidPressed()
             loginViewVM.resetName()
+        }) {
+            Text(contentViewVM.buttonName)
         }
         .modifier(ButtonViewModifier(viewModel: contentViewVM, background: .blue))
     }
